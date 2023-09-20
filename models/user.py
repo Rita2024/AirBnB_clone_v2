@@ -5,6 +5,7 @@ from models.base_model import BaseModel, Base
 import sqlalchemy
 from sqlalchemy import Column, String
 from os import getenv
+from sqlalchemy.orm import relationship
 
 
 class User(BaseModel):
@@ -16,7 +17,6 @@ class User(BaseModel):
         first_name = Column(String(128), nullable=True)
         last_name = Column(String(128), nullable=True)
         places = relationship("Place", backref="user")
-        reviews = relationship("Review", backref="user")
     else:
     """This class defines a user by various attributes"""
         email = ''
