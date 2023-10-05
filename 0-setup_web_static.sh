@@ -23,7 +23,11 @@ printf %s "server {
         index index.html index.htm;
     }
     location /redirect_me {
+<<<<<<< HEAD
         return 301 http://cuberule.com/;
+=======
+        return 301 http://frontendnerd.tech/;
+>>>>>>> 64bc7295404c6ca1f650fbff1c9e21c9b3ec67f5
     }
     error_page 404 /404.html;
     location /404 {
